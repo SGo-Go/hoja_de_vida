@@ -1,0 +1,340 @@
+\documentclass[
+  a4paper
+]{../FortySecondsCV/fortysecondscv}
+
+
+\usepackage{enumitem}
+
+\setlength\parindent{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1}
+
+% improve word spacing and hyphenation
+\usepackage{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% font encoding configuration
+\ifxetexorluatex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\else
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\fi
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+  % default font size is \large, so adjust to harmonize with sidebar layout
+  bubble center node font = \footnotesize,
+  bubble node font = \footnotesize,
+  % default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+  bubble center node size = 0.4\sidebartextwidth,
+  bubble node size = 0.25\sidebartextwidth,
+  distance center/other bubbles = 1.5em,
+  % set center bubble color
+  bubble center node color = maincolor!70,
+  %% % define the list of colors usable in the diagram
+  set color list = {maincolor!10, maincolor!40,
+    maincolor!20, maincolor!60, maincolor!35},
+  %% % sets the opacity at which the bubbles are shown
+  %% bubble fill opacity = 0.8,
+}
+
+\renewcommand{\emph}[1]{\textcolor{cyan!75!black!120}{\textbf{#1}}}
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+\cvname{Olena \\[0.1em] K.}
+\cvjobtitle{Software Development \\ Engineer}
+
+% profile picture
+\cvprofilepic{../FortySecondsCV/pics/logo.png}
+%% % date of birth
+%% \cvbirthday{October 8, 1999}
+\cvaddress{Los Boliches 21, apt.\,15,\newline
+  70569 Fuengirola (M{\'a}laga), Spain}
+\cvphone{+49 176 948-77883}
+%% % personal website
+\cvsite{https://olena.es}
+% email address
+\cvmail{o.k@gmail.com}
+\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+\addtofrontsidebar{
+  \graphicspath{{../FortySecondsCV/pics/gosquared-flags/flags/flags-iso/shiny/64/}}
+
+  % social network accounts incl. proper hyperlinks
+  %% \profilesection{Social Network}
+  \begin{icontable}{1.5em}{1em}
+    \social{\faLinkedin}{https://ua.linkedin.com/in/olena-k}{olena-k}
+    \social{\faGithub}{https://github.com/ok}{ok}
+    \social{\faGitlab}{https://gitlab.com/ok}{ok}
+    \social{\flag{ES.png}}{}{permanent residence permit}
+    \social{\flag{UA.png}}{}{citizenship}
+  \end{icontable}
+
+  \profilesection{Core competencies}
+  \begin{figure}\centering
+    \smartdiagram[bubble diagram]{
+      \textcolor{white}{\textbf{Software}} \\
+      \textcolor{white}{\textbf{engineering}},
+      \textcolor{black!90}{Python}\\
+      \textcolor{black!90}{C++},
+      \textcolor{black!90}{Unix},
+      \textcolor{black!90}{DevOps},
+      \textcolor{black!90}{WebDev}
+      % \textcolor{black!90}{Math:}\\
+      % \textcolor{black!90}{Numerics}
+    }
+  \end{figure}
+
+  % https://fontawesome.com/v5.15/icons
+  \barskill{\faCuttlefish\small{\bf++}}{Modern C++ ecosystem}{95}
+  \barskill{\faPython}{Python ecosystem}{85}
+
+  \profilesection{Education}
+
+  \textbf{MSc, Computer Engineering} \\
+  Specialization: {\it System Programming} \\
+  \href{https://donntu.edu.ua/en/knt-en}{Donetsk National Technical University} \\
+  Jun~2018 | Donetsk, Ukraine
+}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+  % national flags from https://github.com/gosquared/flags;
+  \graphicspath{{../FortySecondsCV/pics/gosquared-flags/flags/flags-iso/shiny/64/}}
+
+  \profilesection{About Me}
+  \aboutme{
+    Passionate in developing and administering Web services that shape human experience with WWW
+  }
+
+  \profilesection{Key Projects}
+  \cvsubsection{Actively contributed}
+  \skill{\faCodeBranch}{\textbf{\href{http://promottrac.mpi-magdeburg.mpg.de/trac/wiki/Diana}{Diana}}  {\scriptsize\chartlabel{C++}\chartlabel{Python2}\chartlabel{Fortran}}}
+  
+  \cvsubsection{Designed \& Developed}
+  \skill{\faGithub}{\textbf{\href{https://github.com/ok/todoro}{Todoro}}  {\scriptsize\chartlabel{Python}\chartlabel{PHP}}}
+
+  %% \profilesection{Technical skills}
+  %% \textbf{\bf Programming}
+  %% \profilesection{Hard Skills}
+  %% \skill{\faBalanceScale}{Sleeping almost all day}
+  %% \skill{\faSitemap}{Eating a lot of bamboo sprouts}
+  %% \skill{\faGraduationCap}{Relaxing rest of the day}
+
+  %% \profilesection{Soft Skills}
+  %% \pointskill{\faHome}{Looking Cute}{4}[4]
+  %% \skill[1.8em]{\faCompress}{No need to specify further}
+  %% \pointskill{\faChild}{Chillin' hard}{3}[4]
+  %% \skill[1.8em]{\faCompress}{On a tree}
+  %% \skill[1.8em]{\faCompress}{In the grass}
+
+
+  \profilesection{Soft skills}
+  \cvsubsection{Languages}
+  \pointskill{\flag{GB.png}}{English (fluent)}{4}
+  \pointskill{\flag{ES.png}}{Spanish (B1)}{2}
+  \pointskill{\flag{DE.png}}{German (B2)}{3}
+  \pointskill{\flag{RU.png}}{Russian (native)}{5}
+  \pointskill{\flag{UA.png}}{Ukrainian (native)}{5}
+  \pointskill{\flag{NO.png}}{Norwegian (A2)}{1}
+
+  %% \cvsubsection{Other}
+  %% %% \chartlabel{Wheel Chart}
+  %% \wheelchart{3.7em}{2em}{%
+  %%   40/3em/maincolor!50/Work\&Study,
+  %%   18/3em/maincolor!15/Chill\&Eat,
+  %%   30/4em/maincolor!40/Sleep,
+  %%   7/3em/maincolor!20/Sports
+  %% }
+
+  %% \profilesection{Memberships}
+  %% \begin{memberships}
+  %%   \membership[4em]{pics/logo.png}{PandaScience.net}
+  %%   \membership[4em]{pics/logo.png}{Some longer text spanning over more than
+  %%     only one line}
+  %% \end{memberships}
+}
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\cvsection{Profile}
+
+\begin{itemize}[leftmargin=*]\setlength\itemsep{-.5em}
+\item Excellent coding skills in Python and JS, as well as skills in Web and DevOps
+\item Solid expertise in 3D modeling and computer graphics design in Adobe Photoshop
+\item Scientific research with the focus on microcontroller programming and numerics (discrete element method)
+\item Life long interest in Computer Science and Web
+\end{itemize}
+
+\cvsection{Skills}
+%% \cvsubsection{}
+
+%\rowcolors{2}{}{gray!50}
+\setlength{\tabcolsep}{.5em}
+\begin{tabular}{ l c  c  c }
+  & \textcolor{black!50}{\textbf{Expert}}
+  & \textcolor{black!50}{\textbf{Proficient}} %& \textcolor{black!50}{\textbf{Advanced/Proficient}}
+  & \textcolor{black!50}{\textbf{Prior Experience}} \\
+  \textbf{Programming} & Python $\bullet$ & C++ $\bullet$ bash $\bullet$ & PHP $\bullet$ Java $\bullet$ \\
+  & TypeScript/JS $\bullet$ & SQL & Matlab $\bullet$ Fortran \\
+  & HTML5/CSS3 &  &  \\
+  \textbf{Web} & Jinja2/Django & Angular & ReactJS \\
+  \textbf{ML libraries} & scipy $\bullet$ & pandas $\bullet$ sklearn $\bullet$ & keras $\bullet$ \\
+  & Jupyter & matplotlib &  bokeh $\bullet$ altair \\
+  \textbf{Tools \& utilities} & CMake & Git $\bullet$ & GitHub-Actions $\bullet$  \\
+  & Adobe Photoshop & Ansible $\bullet$ Docker & Jenkins \\
+\end{tabular}
+\setlength{\tabcolsep}{0em}
+
+\graphicspath{{../FortySecondsCV/pics/gosquared-flags/flags/flags-iso/shiny/64/}}
+
+\cvsection{Work Experience}
+\cvsubsection{Development \& Academic Research}
+
+\begin{cvtable}[1]
+  \cvitem{Oct~2020 -- Present}{Web developer}{\emph{Freelance, M{\'a}laga}, Spain\flag{ES.png}}
+         {
+         Freelancing: development and support of Web services
+                {\footnotesize \setlength\parindent{0pt}\setlength{\parskip}{-1.em}
+                  \begin{itemize}[leftmargin=*]\setlength\itemsep{-.5em}
+                  \item designed and developed todoer Web app
+                    (\href{https://github.com/ok/todoro}{{\emph\faGithub} Todoro})
+                  \item ...
+                  \end{itemize}
+                }%\setlength{\parskip}{0em}
+         {\scriptsize
+           \chartlabel{PHP}
+           \chartlabel{Python}
+           \chartlabel{HTML5/CSS3}
+           \chartlabel{JS}
+           \chartlabel{Git/Gerrit}
+           \chartlabel{GH-Actions}
+           \chartlabel{Docker}
+         }
+         %\newline
+       }
+  \cvitem{Feb~2020 -- Sep~2020, Jun~2019 -- Sep~2019}
+         {Visiting Scholar}
+         {\emph{\href{http://www.hlrs.de}{{\it High-Performance Computing Center}}, Stuttgart}, Germany\flag{DE.png}}%
+         {
+          Academic research: development of microservices and digital twins with CFD simulations
+          for Pan-European Network of HPC (\href{http://www.hpc-europa.eu/}{HPC-Europa3})
+          {\footnotesize \setlength\parindent{0pt}\setlength{\parskip}{-1.em}
+            \begin{itemize}[leftmargin=*]\setlength\itemsep{-.5em}
+            \item developed microservices for CFD simulation of dynamic networked objects
+              % developed parallel algorithm for ...
+            \item designed and implemented digital twins of complex dynamic system with networked CFD components
+            \end{itemize}
+          }
+          {\scriptsize
+            \chartlabel{C/C++}
+            \chartlabel{Python}
+            \chartlabel{bash}
+            \chartlabel{Git}
+            \chartlabel{VBox}
+          } %XML/XSLT/XPath, , bash/tcsh, 
+           %\newline
+         }
+  \cvitem{Feb~2018 -- Sep~2018}
+         {Internship}
+         {\emph{\href{https://www.tuhh.de}{{\it Hamburg University of Technology}}, Hamburg}, Germany\flag{DE.png}}%
+         {
+          Academic research: experimental virtual lab for studying granular flows
+          (funded by \href{https://verfahrenstechnik-pro3.de/}{Pro3 society})
+          {\footnotesize \setlength\parindent{0pt}\setlength{\parskip}{-1.em}
+            \begin{itemize}[leftmargin=*]\setlength\itemsep{-.5em}
+            \item 
+              developed parallel algorithm for ...
+            \item ...
+            \end{itemize}
+          }
+          {\scriptsize
+            \chartlabel{C/C++}
+            \chartlabel{Python}
+            \chartlabel{bash}
+            \chartlabel{Git}
+          }
+         }
+\end{cvtable}
+
+
+\cvsubsection{Teaching}
+\begin{cvtable}[1]
+  \cvitem{Mar~2017 -- Jan~2018}%
+         {TA}
+         {\textit{\href{https://donntu.edu.ua/en/knt-en}{Donetsk National Technical University}}, Donetsk, Ukraine \flag{UA.png}}
+         {\setlength\parindent{0pt}\setlength{\parskip}{-1.5em}
+           List of courses:%
+           \begin{itemize}%
+             \setlength\itemsep{-.5em}
+           \item Parallel and Distributed Computing
+           \end{itemize}
+         }
+\end{cvtable}
+
+\cvsection{Education}
+\cvsubsection{Academic Degrees}
+\begin{cvtable}[1.5]
+  \cvitem{Jul~18}%
+         {M.Sc. in Computer Engineering}
+         {Magna Cum Laude, GPA: 4.9 (out of 5)}
+         {\href{http://cs.donntu.edu.ua/English/indexEn.php}{\it Donetsk National Technical University}, Donetsk, Ukraine \flag{UA.png}
+           \newline Major: \textbf{System Programming}
+           \newline Thesis: \textit{Research of 3D printing technology usage in microsystems component development}
+           \newline Advisor: Dr. Oleksandr Samoshchenko
+         }
+
+  \cvitem{Jun 2016}
+                {BSc. in Computer Engineering}
+                {Magna Cum Laude, GPA: 4.9 (out of 5)}
+                {\href{http://cs.donntu.edu.ua/English/indexEn.php}{Donetsk National Technical University}, Donetsk, Ukraine}
+                % {Majors:}\\
+                % {Computer Sciences}
+                % {Electrical Engineering}
+                % {Mathematics}
+\end{cvtable}
+
+% \cvsubsection{Extra-Curricular Study (MOOCs, Certifications, Summer Schools)}
+% \begin{cvtable}%[1.5]
+%   \cvitem{2019}{\href{https://www.edx.org/course/machine-learning-with-python-from-linear-models-to}{MIT 6.86x: Machine Learning with Python -- From Linear Models to Deep Learning} %
+%     (\href{https://drive.google.com/file/d/1mNjdl5hDr3BJFQ3U7P9JBaD4FhR71UuN/view?usp=sharing}{AT})}{MIT/\href{https://edx.org}{edX}}{}
+% \end{cvtable}
+
+\newpage
+\makebacksidebar
+
+\cvsection{Grants and Awards}
+\begin{cvtable}
+  \cvitem{2020, 2019}{Young Investigator Scholarship}{\href{http://www.hpc-europa.eu/}{HPC-Europa3}, Germany \flag{DE.png}}{}
+  \cvitem{2018}{Pro3-Scholarship}{\href{https://verfahrenstechnik-pro3.de}{Verfahrenstechnik Pro3 e.V.}, Germany \flag{DE.png}}{}
+  % \cvitem{2000}{Science Olympiads in Informatics and Mathematics}{\href{https://mon.gov.ua/eng}{MoES}, Ukraine \flag{UA.png}}{}
+\end{cvtable}
+
+\cvsection{Selected Side Projects}
+\begin{cvtable}
+  \cvitem{\faCodeBranch$\quad$\emph{\href{http://promottrac.mpi-magdeburg.mpg.de/trac/wiki/Diana}{Diana}}}{%
+    Simulation environment for DAE models}{\chartlabel{C++}\chartlabel{Python2}}{}
+  \cvitem{\faGithub$\quad$\emph{\href{https://github.com/ok/todoro}{Todoro}}}{%
+    TODO Service}{\chartlabel{Python}\chartlabel{PHP}}{}
+\end{cvtable}
+
+\end{document}
