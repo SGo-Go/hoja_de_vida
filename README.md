@@ -5,7 +5,8 @@
 1. Cloning 
   ```bash
   git clone https://$USER@github.com/$USER/hoja_de_vida.git
-  git submodule update --init && cd FortySecondsCV/ && git submodule update --init
+  cd ./hoja_de_vida
+  git submodule update --init && cd ./FortySecondsCV && git submodule update --init
   ```
 
 2. Edit and compite
