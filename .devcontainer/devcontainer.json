@@ -1,22 +1,17 @@
 {
     "name": "VScode LaTeX ENV for CV",
-    "dockerComposeFile": ["docker-compose.yml"],
-    "service": "vscode",
-    "runServices": ["vscode"],
-    "shutdownAction": "stopCompose",
-    "workspaceFolder": "/workspace",
-    "postCreateCommand": "",
-    // // Set *default* container specific settings.json values on container create.
-    // "settings": {
-    //     "terminal.integrated.shell.linux": "/bin/bash"
-    // },
-    // // Add the IDs of extensions you want installed when the container is created.
-    // "extensions": [
-    //     "james-yu.latex-workshop",
-    //     "tecosaur.latex-utilities",
-    //     "yzhang.markdown-all-in-one",
-    //     "valentjn.vscode-ltex"
-    // ],
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "root",
+    "extensions": [
+        "james-yu.latex-workshop",
+        // "tecosaur.latex-utilities",
+        // "yzhang.markdown-all-in-one",
+        // "valentjn.vscode-ltex",
+        "eamodio.gitlens"
+    ]
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
     // Uncomment when using a ptrace-based debugger like C++, Go, and Rust
