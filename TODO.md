@@ -1,10 +1,15 @@
 # Next steps
 
+### Preparation steps
 - [ ] prepare local environment:
   - fork this project
   - install [`devcontainer`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension for VS code
   - try [`devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers) from VS code
-  - skim through references
+  - skim through [references](TODO.md#references)
+
+### Coding steps
+
+It is recommended to make the following coding steps as [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for @sgo-go to review.
 - [ ] modify [`devcontainer.json`](.devcontainer/devcontainer.json) to add your favorite VS code extensions
   - [git](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
   - [markdown](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
@@ -12,9 +17,12 @@
   - [latex](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
   - [actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)
 - [ ] replace direct use of `Dockerfile` by `docker-compose`
-- [ ] rewrite `Dockerfile` to produce compact latex docker image that includes only minimum necessary packages
 - [ ] inject [`FortySecondsCV`](https://github.com/PandaScience/FortySecondsCV) package in Docker image and remove [`FortySecondsCV`](.gitmodules) submodule from repo
+- [ ] rewrite `Dockerfile` to produce compact latex docker image that includes only minimum necessary packages
 - [ ] modify $\LaTeX$ code of CV from [`devcontainer`]((https://code.visualstudio.com/docs/devcontainers/containers)) using VS code
+
+### Delivery steps
+
 - [ ] prepare release
 - [ ] (optional) add [GitHub action](https://habr.com/en/articles/561644/) that publishes your CV in PDF format
 - [ ] (optional) use [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action)
