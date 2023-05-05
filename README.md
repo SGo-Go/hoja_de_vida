@@ -17,3 +17,8 @@
       ```bash
       cd /workspaces/hoja_de_vida/docs && xelatex ./cv.tex
       ```
+
+Testing outside VS code:
+```
+docker run -it --entrypoint bash texlive/texlive
+```
